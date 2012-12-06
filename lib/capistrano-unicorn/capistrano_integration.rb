@@ -143,7 +143,7 @@ module CapistranoUnicorn
                 #{start_unicorn}
               fi;
 
-              sleep 2; # in order to wait for the (old) pidfile to show up
+              sleep 5; # in order to wait for the (old) pidfile to show up
 
               if #{old_unicorn_is_running?}; then
                 #{unicorn_send_signal('QUIT', get_old_unicorn_pid)};
